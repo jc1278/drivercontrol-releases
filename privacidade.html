@@ -1,0 +1,182 @@
+<title>Privacidade do Driver Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root {
+    --ground: #f5f8f7;
+    --panel: #ffffff;
+    --ink: #13201d;
+    --muted: #55655f;
+    --rule: #d9e3df;
+    --accent: #177a61;
+    --accent-soft: #e2f4ee;
+    --chip: #eef3f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #0b1114;
+      --panel: #121b1f;
+      --ink: #f2f7f5;
+      --muted: #a9bab4;
+      --rule: #22302c;
+      --accent: #72e0bf;
+      --accent-soft: #14302a;
+      --chip: #172226;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #0b1114;
+    --panel: #121b1f;
+    --ink: #f2f7f5;
+    --muted: #a9bab4;
+    --rule: #22302c;
+    --accent: #72e0bf;
+    --accent-soft: #14302a;
+    --chip: #172226;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Manrope", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+  }
+  main { max-width: 68ch; margin: 0 auto; display: grid; gap: 28px; }
+  header { display: grid; gap: 10px; }
+  .mark { display: flex; align-items: center; gap: 12px; }
+  .mark svg { width: 44px; height: 44px; border-radius: 12px; flex: none; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .fact { background: var(--accent-soft); border-radius: 14px; padding: 14px 16px; }
+  .fact strong { display: block; font-size: 15px; }
+  .fact span { color: var(--muted); font-size: 13.5px; line-height: 1.45; display: block; }
+  section { display: grid; gap: 10px; }
+  h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 0; padding-top: 18px; border-top: 1px solid var(--rule); text-wrap: balance; }
+  p, ul { margin: 0; }
+  ul { padding-left: 1.2em; display: grid; gap: 6px; }
+  .perm { display: grid; gap: 12px; }
+  .perm div { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; }
+  .perm dt { font-weight: 700; }
+  .perm dd { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; background: var(--chip); color: var(--muted); border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: 2px; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+
+<main>
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 108 108" role="img" aria-label="Ícone do Driver Control">
+        <rect width="108" height="108" fill="#101819"/>
+        <path d="M28,76L45,30M80,76L63,30M54,65L54,76M54,45L54,52" stroke="#78DEC0" stroke-width="6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="eyebrow">Driver Control · Política de privacidade</span>
+    </div>
+    <h1>Seus dados de trabalho ficam no seu celular</h1>
+    <p class="meta">Vigente desde 19 de outubro de 2026 (versão com conta, 1.0.17) · aplicativo Android <em>Driver Control</em> (pacote com.drivercontrol.personal), versão 1.0 e seguintes.</p>
+  </header>
+
+  <div class="facts" aria-label="Resumo">
+    <div class="fact"><strong>Conta só para o plano</strong><span>Entrada com o Google; guardamos o e-mail e o plano.</span></div>
+    <div class="fact"><strong>Trabalho no celular</strong><span>Jornadas, ganhos e corridas não vão ao nosso servidor.</span></div>
+    <div class="fact"><strong>Sem anúncios</strong><span>Nenhum SDK de publicidade ou de análise.</span></div>
+    <div class="fact"><strong>Backup seu</strong><span>Opcional, pelo Android, na sua conta Google.</span></div>
+  </div>
+
+  <section>
+    <h2>O que o app faz</h2>
+    <p>O Driver Control ajuda motoristas de aplicativo a controlar jornadas, ganhos, despesas, recargas e metas, e a avaliar ofertas de corrida pelo lucro real. Todo o processamento acontece no próprio aparelho.</p>
+  </section>
+
+  <section>
+    <h2>Conta e plano</h2>
+    <p>Para usar o app você entra com a sua conta Google. O Google nos informa o seu nome e o seu e-mail. No nosso servidor (Supabase, na região de São Paulo) guardamos só o necessário para a conta e o plano: o e-mail, o plano e os dias de teste, os celulares em que a conta entrou (modelo, versão do app, um identificador da instalação e um código do aparelho embaralhado, que não permite saber qual é o aparelho) e, quando houver assinatura paga, os pagamentos (processados pelo Asaas; nunca recebemos dados de cartão). Jornadas, ganhos, despesas, corridas e locais nunca vão para esse servidor.</p>
+  </section>
+
+  <section>
+    <h2>Dados guardados no seu aparelho</h2>
+    <p>Estes dados ficam só no armazenamento privado do app no seu celular. Nós não temos acesso a eles. Se o backup do Google estiver ligado no seu celular, o Android guarda uma cópia criptografada do banco do app e dos ajustes do popup na sua conta Google e a devolve ao instalar o app num celular novo; essa cópia não passa pelos nossos servidores.</p>
+    <ul>
+      <li>Jornadas: início, fim, pausas e a distância estimada pelo GPS. As coordenadas de localização não são gravadas; só a distância somada.</li>
+      <li>Ganhos, gorjetas, despesas, recargas de energia, custos fixos e metas que você informa.</li>
+      <li>Corridas particulares que você lança, se você digitar: nome e telefone do passageiro, embarque, destino, forma de pagamento, se ainda falta receber e os km da corrida. Ligar ou abrir o WhatsApp do passageiro passa o número para o app de telefone ou o WhatsApp do seu celular; o Driver Control não envia nada.</li>
+      <li>Perfil do veículo e do seu plano de trabalho (dias, horas, custos, meta semanal).</li>
+      <li>Ofertas lidas pelo Radar: valor, distâncias, tempos, categoria, nota do passageiro e a confiança da leitura. Nomes e o texto da tela não são guardados.</li>
+      <li>Locais das corridas (opcional, desligado por padrão): se você ligar “Guardar locais das corridas” e aceitar o aviso, o app guarda a rua, o bairro e a cidade de embarque e de destino que o Uber/99 mostram no cartão da oferta, para o relatório de regiões. O número da casa, o CEP e complementos nunca são guardados. Você pode desligar e apagar esses locais a qualquer momento na tela Captura. Se você tocar em “Ver rota no Google Maps” numa corrida, a rua, o bairro e a cidade de embarque e destino são abertos no app Google Maps (ou no navegador), que os envia ao Google; o Driver Control continua sem acesso à internet.</li>
+      <li><strong>Endereço exato para o Maps (opcional, desligado por padrão):</strong> com essa opção, que tem aviso próprio, o app guarda também o endereço completo que o cartão da Uber ou da 99 mostra (rua, número, complemento e CEP quando aparecem), só neste celular, para abrir o embarque e o destino no Google Maps. Ele é apagado automaticamente 30 dias depois da captura e também em Captura → Apagar locais guardados. O endereço só sai do celular se você tocar em um botão do Google Maps; backups que você exportar levam os endereços ainda não vencidos.</li>
+      <li>O que aconteceu com cada corrida (aceita, recusada, concluída), com horário e origem de cada passo.</li>
+      <li>Um registro de diagnóstico do Radar, com códigos e números apenas, que você pode copiar se quiser pedir ajuda.</li>
+      <li>Modo de calibração (desligado por padrão): se você ligar, o app guarda até 200 esboços de telas do Uber/99 em que nomes, ruas e telefones viram a letra W e números viram N.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Permissões e para que servem</h2>
+    <dl class="perm">
+      <div>
+        <dt>Localização precisa <span class="tag">só na jornada</span></dt>
+        <dd>Usada apenas quando você inicia uma jornada com GPS, para medir a distância percorrida. Enquanto a jornada está ativa, o Android mostra uma notificação do serviço em primeiro plano. O app não pede localização em segundo plano.</dd>
+      </div>
+      <div>
+        <dt>Serviço de Acessibilidade (Radar) <span class="tag">opcional</span></dt>
+        <dd>Só funciona depois que você lê e aceita um aviso no app e ativa o serviço nas configurações do Android. Ele lê a tela dos apps Uber Driver e 99 Motorista enquanto mostram uma oferta. Quando o texto não está disponível, captura a imagem só da janela desses apps e lê os números no próprio aparelho; a imagem é descartada em seguida. O Radar nunca toca na tela, não aceita e não recusa corridas.</dd>
+      </div>
+      <div>
+        <dt>Acesso às notificações <span class="tag">opcional</span></dt>
+        <dd>Se você ativar, o app lê as notificações do Uber Driver e do 99 Motorista para registrar ofertas, aceites e conclusões. Notificações de outros apps são ignoradas.</dd>
+      </div>
+      <div>
+        <dt>Notificações</dt>
+        <dd>Para mostrar a jornada em andamento e avisar quando o Radar parou de funcionar.</dd>
+      </div>
+      <div>
+        <dt>Apps instalados (Uber Driver e 99 Motorista)</dt>
+        <dd>O app só verifica se esses dois apps estão instalados, para mostrar seus ícones e orientar a configuração.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Compartilhamento</h2>
+    <p>Nenhum dado é vendido. Os dados da conta ficam com os fornecedores que fazem o serviço funcionar: Supabase (servidor da conta), Google (login) e Asaas (pagamentos, quando houver). O app não contém bibliotecas de publicidade, de análise de uso ou de relatório de falhas.</p>
+  </section>
+
+  <section>
+    <h2>Backup</h2>
+    <p>Se o backup do Google estiver ligado no seu celular, o Android guarda uma cópia criptografada dos dados do app (jornadas, ganhos, despesas e ajustes do popup) na sua conta Google e a devolve quando você instala o app num celular novo com a mesma conta. Essa cópia é do Android e da sua conta Google: não passa pelos nossos servidores. Em Perfil → Backup dos dados você também pode salvar um arquivo com todos os seus dados, no lugar que escolher. Esse arquivo contém suas informações financeiras: guarde-o com cuidado.</p>
+  </section>
+
+  <section>
+    <h2>Guarda e exclusão</h2>
+    <p>Os dados de trabalho ficam no aparelho até você apagá-los. Você pode excluir registros no próprio app; limpar os dados do app ou desinstalá-lo apaga o que está no celular. Em Perfil → Conta e plano você pode excluir a sua conta: o e-mail, o plano e os celulares saem do nosso servidor; registros de pagamento são mantidos sem identificação pelo prazo exigido por lei.</p>
+  </section>
+
+  <section>
+    <h2>Seus direitos (LGPD)</h2>
+    <p>Você pode acessar, corrigir, exportar (pelo backup) e excluir os seus dados de trabalho no próprio app, a qualquer momento. Os dados da conta você exclui em Perfil → Conta e plano, ou pedindo pelo e-mail de suporte.</p>
+  </section>
+
+  <section>
+    <h2>Público</h2>
+    <p>O app é destinado a motoristas maiores de 18 anos e não é direcionado a crianças.</p>
+  </section>
+
+  <section>
+    <h2>Marcas de terceiros</h2>
+    <p>Uber e 99 são marcas de seus respectivos titulares. O Driver Control é um app independente e não é afiliado, patrocinado nem aprovado por essas empresas.</p>
+  </section>
+
+  <section>
+    <h2>Mudanças e contato</h2>
+    <p>Se esta política mudar, a nova versão será publicada nesta página com a data de vigência atualizada. Dúvidas sobre privacidade: use o e-mail de suporte exibido na tela de entrada com o Google.</p>
+  </section>
+
+  <footer>Driver Control · desenvolvedor independente · Brasil</footer>
+</main>

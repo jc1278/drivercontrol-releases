@@ -1,0 +1,90 @@
+<title>Driver Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root {
+    --ground: #f5f8f7;
+    --panel: #ffffff;
+    --ink: #13201d;
+    --muted: #55655f;
+    --rule: #d9e3df;
+    --accent: #177a61;
+    --accent-soft: #e2f4ee;
+    --chip: #eef3f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #0b1114;
+      --panel: #121b1f;
+      --ink: #f2f7f5;
+      --muted: #a9bab4;
+      --rule: #22302c;
+      --accent: #72e0bf;
+      --accent-soft: #14302a;
+      --chip: #172226;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #0b1114;
+    --panel: #121b1f;
+    --ink: #f2f7f5;
+    --muted: #a9bab4;
+    --rule: #22302c;
+    --accent: #72e0bf;
+    --accent-soft: #14302a;
+    --chip: #172226;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Manrope", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+  }
+  main { max-width: 68ch; margin: 0 auto; display: grid; gap: 28px; }
+  header { display: grid; gap: 10px; }
+  .mark { display: flex; align-items: center; gap: 12px; }
+  .mark svg { width: 44px; height: 44px; border-radius: 12px; flex: none; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .fact { background: var(--accent-soft); border-radius: 14px; padding: 14px 16px; }
+  .fact strong { display: block; font-size: 15px; }
+  .fact span { color: var(--muted); font-size: 13.5px; line-height: 1.45; display: block; }
+  section { display: grid; gap: 10px; }
+  h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 0; padding-top: 18px; border-top: 1px solid var(--rule); text-wrap: balance; }
+  p, ul { margin: 0; }
+  ul { padding-left: 1.2em; display: grid; gap: 6px; }
+  .perm { display: grid; gap: 12px; }
+  .perm div { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; }
+  .perm dt { font-weight: 700; }
+  .perm dd { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; background: var(--chip); color: var(--muted); border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: 2px; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+
+<main>
+  <header>
+    <div class="brand"><span class="eyebrow">Driver Control</span></div>
+    <h1>Controle de jornada e lucro real para motoristas de aplicativo</h1>
+    <p class="meta">App Android. Jornada, ganhos, despesas e metas num lugar só, e o Radar que avalia as ofertas da Uber e da 99 pelo seu lucro real.</p>
+  </header>
+  <section>
+    <h2>Baixar</h2>
+    <p><a href="https://github.com/jc1278/drivercontrol-releases/releases/latest">Última versão do app (APK)</a>. No celular, permita instalar apps desta origem quando o Android pedir.</p>
+  </section>
+  <section>
+    <h2>Privacidade</h2>
+    <p>Seus dados de trabalho ficam no seu celular. Leia a <a href="privacidade.html">política de privacidade</a>.</p>
+  </section>
+  <footer>Driver Control · desenvolvedor independente · Brasil</footer>
+</main>
+</body>
+</html>
